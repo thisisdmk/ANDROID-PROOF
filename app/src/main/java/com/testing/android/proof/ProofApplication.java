@@ -20,7 +20,6 @@ public final class ProofApplication extends Application implements HasActivityIn
 
     public ProofApplication() {
         DaggerAppComponent.builder()
-                .appModule(new AppModule(this))
                 .application(this)
                 .build().inject(this);
     }

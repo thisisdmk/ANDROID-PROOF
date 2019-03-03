@@ -19,8 +19,6 @@ public interface AppComponent {
         @BindsInstance
         Builder application(ProofApplication app);
 
-        Builder appModule(AppModule appModule);
-
         AppComponent build();
     }
 

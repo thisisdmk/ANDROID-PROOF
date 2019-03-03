@@ -1,6 +1,5 @@
 package com.testing.android.proof;
 
-import android.app.Application;
 import android.content.Context;
 
 import com.testing.android.proof.data.DataModule;
@@ -20,16 +19,11 @@ import dagger.Provides;
         ActivityBuilder.class
 })
 final class AppModule {
-    private final Context context;
-
-    public AppModule(Application application) {
-        context = application;
-    }
 
     @Provides
     @Singleton
-    Context provideContext() {
-        return context;
+    Context provideContext(ProofApplication app) {
+        return app;
     }
 
     @Provides
